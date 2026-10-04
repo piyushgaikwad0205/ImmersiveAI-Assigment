@@ -24,7 +24,6 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const initAuth = async () => {
             const savedToken = localStorage.getItem('taskly_token');
-            const savedUserId = localStorage.getItem('taskly_user_id');
 
             const allUsers = await loadUsers();
 
@@ -35,17 +34,10 @@ export const AuthProvider = ({ children }) => {
                     setUser(profile);
                 } catch {
                     localStorage.removeItem('taskly_token');
-                    if (savedUserId && allUsers) {
-                        const matched = allUsers.find(u => u.id === savedUserId);
-                        if (matched) setUser(matched);
-                    }
+                    localStorage.removeItem('taskly_user_id');
+                    setToken(null);
+                    setUser(null);
                 }
-            } else if (savedUserId && allUsers) {
-                const matched = allUsers.find(u => u.id === savedUserId);
-                if (matched) setUser(matched);
-            } else if (allUsers && allUsers.length > 0) {
-                setUser(allUsers[0]);
-                localStorage.setItem('taskly_user_id', allUsers[0].id);
             }
 
             setLoading(false);
