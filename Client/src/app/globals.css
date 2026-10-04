@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    color: #17171c;
+    background: #f4f4f3;
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.serif {
+    font-family: Fraunces, serif;
+    letter-spacing: -0.02em;
+}
+
+.frame {
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.18);
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #5b5d68;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+    cursor: pointer;
+}
+
+.nav a.on {
+    background: #f7efe9;
+    color: #17171c;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    background: #f6f6f6;
+}
+
+.box {
+    border: 1px solid #ececf2;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.panel {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #ecebe8;
+}
+
+.tool {
+    border: 1px solid #e3e3ea;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    cursor: pointer;
+    outline: none;
+    color: #17171c;
+    transition: all 0.15s ease;
+}
+
+.tool.on {
+    background: #17171c;
+    color: #ffffff;
+    border-color: #17171c;
+}
+
+.tb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #e7e6e3;
+    border-radius: 10px;
+    padding: 8px 13px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #17171c;
+}
+
+.cat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #ecebe8;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    background: #ffffff;
+    transition: 0.15s;
+    text-align: left;
+    cursor: pointer;
+    color: #17171c;
+}
+
+.cat:hover {
+    border-color: #B0623E;
+    box-shadow: 0 8px 20px -14px rgba(176, 98, 62, 0.4);
+}
+
+.row {
+    border: 1px solid #ececf2;
+    border-radius: 14px;
+    background: #ffffff;
+    transition: 0.15s;
+}
+
+.row:hover {
+    box-shadow: 0 10px 24px -12px rgba(20, 20, 40, 0.12);
+    border-color: #d8d8e2;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 9px;
+    border-radius: 7px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #e5e5eb;
+}
+
+.tag-todo {
+    background: #f1f1f1;
+    color: #555555;
+    border: none;
+}
+
+.tag-progress {
+    background: #17171c;
+    color: #ffffff;
+    border: 1px solid #17171c;
+}
+
+.tag-done {
+    background: #f7efe9;
+    color: #B0623E;
+    border: 1px solid #ebd5c8;
+}
+
+.cnt {
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid #e3e3ea;
+    border-radius: 7px;
+    padding: 3px 7px;
+    color: #6b7280;
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.bar {
+    height: 5px;
+    border-radius: 9px;
+    background: #ececf1;
+    overflow: hidden;
+    border: 1px solid rgba(23, 23, 28, 0.08);
+}
+
+.bar i {
+    display: block;
+    height: 100%;
+    background: #17171c;
+    border-radius: 9px;
+    transition: width 0.3s ease;
+}
+
+.av {
+    width: 24px;
+    height: 24px;
+    border-radius: 99px;
+    display: inline-grid;
+    place-items: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+    text-transform: uppercase;
+}
+
+.btn {
+    background: #17171c;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 9px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #17171c;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+}
+
+.btn:hover {
+    opacity: 0.88;
+}
+
+.ghost {
+    border: 1px solid #e3e3ea;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 18px;
+    display: inline-block;
+    background: #ffffff;
+    color: #17171c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ghost:hover {
+    background: #f6f6f6;
+}
+
+.field {
+    width: 100%;
+    border: 1px solid #e3e3ea;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-size: 14px;
+    background: #ffffff;
+    outline: none;
+    color: #17171c;
+}
+
+.field:focus {
+    border-color: #B0623E;
+    box-shadow: 0 0 0 2px rgba(176, 98, 62, 0.2);
+}
+
+.chip {
+    border: 1px solid #e3e3ea;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    background: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #17171c;
+}
+
+.tab {
+    white-space: nowrap;
+    flex: none !important;
+    padding: 8px 14px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b6b70;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    border: 1px solid #e7e6e3;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.tab.on {
+    background: #17171c;
+    color: #ffffff;
+    border-color: #17171c;
+}
+
+.tab.on span {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.seg {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 11px;
+    background: #f1f0ee;
+    border: 1px solid #e7e6e3;
+}
+
+.trow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid #ececf2;
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 14px 16px;
+    transition: 0.15s;
+}
+
+.trow:hover {
+    box-shadow: 0 10px 24px -12px rgba(20, 20, 40, 0.12);
+    border-color: #d8d8e2;
+}
+
+.chk {
+    width: 20px;
+    height: 20px;
+    border-radius: 7px;
+    border: 1.5px solid #d1d5db;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: #ffffff;
+}
+
+.chk.on {
+    background: #B0623E;
+    border-color: #B0623E;
+}
+
+.grp.drag {
+    background: #fbf7f4;
+    border-radius: 14px;
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.pop {
+    animation: pop 0.2s ease-out;
+}
+
+.accent-black {
+    accent-color: #17171c;
+}
+
+.wash {
+    background: radial-gradient(50% 60% at 80% 0, #ffffff 0, transparent 70%),
+                radial-gradient(40% 50% at 10% 20%, #ffffff 0, transparent 70%);
+}

@@ -1,0 +1,16 @@
+{
+  "name": "smart-task-manager-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm --prefix Client install",
+    "dev:backend": "node Backend/server.js",
+    "dev:client": "npm --prefix Client run dev",
+    "build": "npm --prefix Client run build",
+    "start": "npm --prefix Client run start"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
